@@ -12,16 +12,12 @@
     Write the code to print all names in the list, one name per line
 */
 console.log("Task: Example");
-const people = ["Tony", "Christian", "Håkon"]
+const people = ["Tony", "Christian", "Håkon"];
 
 for (let index = 0; index < people.length; index++) {
-    let person = people[index];
-    console.log(person);
+  let person = people[index];
+  console.log(person);
 }
-
-
-
-
 
 /* -----------------------------------------------------------------------------
     Task: A
@@ -34,27 +30,69 @@ for (let index = 0; index < people.length; index++) {
 */
 console.log("Task: A");
 
+const LIST_OF_NUMBERS = [0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55];
+let sumListOfNumbers = sum(LIST_OF_NUMBERS);
 
+function sum(liste) {
+  let sum = 0;
 
+  for (let num of liste) {
+    sum += num;
+  }
+  return sum;
+}
 
-
+console.log("Task A answer: " + sumListOfNumbers);
 
 /* -----------------------------------------------------------------------------
     Task: B
 
     1. Use a for loop to find the position of 'raspberry' in the list of fruits.
-    2. Create a generic function that can find the position of anny fruit in the list. 
+    2. Create a generic function that can find the position of any fruit in the list. 
 */
 console.log("Task: B");
 
-const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'mango', 'pineapple', 'pear', 'peach', 'plum', 'watermelon', 'blueberry', 'raspberry', 'blackberry', 'strawberry', 'cherry', 'lemon', 'lime', 'pomegranate', 'apricot'];
+const fruits = [
+  "apple",
+  "banana",
+  "orange",
+  "grape",
+  "kiwi",
+  "mango",
+  "pineapple",
+  "pear",
+  "peach",
+  "plum",
+  "watermelon",
+  "blueberry",
+  "raspberry",
+  "blackberry",
+  "strawberry",
+  "cherry",
+  "lemon",
+  "lime",
+  "pomegranate",
+  "apricot",
+];
+let taskBAnswer = "";
 
+for (let i = 0; i < fruits.length; i++){
+    let fruit = fruits[i];
+    if (fruit === "raspberry"){
+        taskBAnswer = i;
+    }
+}
 
-
-
-
-
-
+function findPosition(list, value){
+    for (let i = 0; i < list.length; i++){
+        let fruit = list[i];
+        if (fruit === value){
+            taskBAnswer = i;
+        }
+    }
+    return taskBAnswer
+}
+console.log("task B Answer: " + findPosition(fruits, "raspberry"));
 
 /* -----------------------------------------------------------------------------
     Task: C
@@ -64,13 +102,16 @@ const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'mango', 'pineappl
     3. Print the number of fruits that start with 'b' (hint: it will be the length of the list from point 2).
 */
 console.log("Task: C");
+let fruitsStartingWithLetterB = [];
 
+for (let i = 0; i < fruits.length; i++){
+    if (fruits[i][0] === "b"){
+        fruitsStartingWithLetterB.push(fruits[i]);
+    }
+}
 
-
-
-
-
-
+console.log(fruitsStartingWithLetterB);
+console.log(fruitsStartingWithLetterB.length);
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -79,10 +120,16 @@ console.log("Task: C");
 */
 console.log("Task: D");
 
+let fruitsLongerThan8Characters = []
 
+for (let i = 0; i < fruits.length; i++){
+    if (fruits[i].length > 8){
+        fruitsLongerThan8Characters.push(fruits[i]);
+    }
+}
 
-
-
+console.log(fruitsLongerThan8Characters);
+console.log(fruitsLongerThan8Characters.length);
 
 /* -----------------------------------------------------------------------------
     Task: E
