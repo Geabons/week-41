@@ -111,7 +111,7 @@ for (let i = 0; i < fruits.length; i++) {
 }
 
 console.log(fruitsStartingWithLetterB);
-console.log(fruitsStartingWithLetterB.length);
+console.log("Task C answer: " + fruitsStartingWithLetterB.length);
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -129,7 +129,7 @@ for (let i = 0; i < fruits.length; i++) {
 }
 
 console.log(fruitsLongerThan8Characters);
-console.log(fruitsLongerThan8Characters.length);
+console.log("Task D answer: " + fruitsLongerThan8Characters.length);
 
 /* -----------------------------------------------------------------------------
     Task: E
@@ -155,4 +155,4 @@ function containsSameItems(listA, listB) {
     }
   return true;
 }
-console.log(containsSameItems(A, B));
+console.log("task E answer: " + containsSameItems(A, B));
