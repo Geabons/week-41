@@ -76,21 +76,21 @@ const fruits = [
 ];
 let taskBAnswer = "";
 
-for (let i = 0; i < fruits.length; i++){
-    let fruit = fruits[i];
-    if (fruit === "raspberry"){
-        taskBAnswer = i;
-    }
+for (let i = 0; i < fruits.length; i++) {
+  let fruit = fruits[i];
+  if (fruit === "raspberry") {
+    taskBAnswer = i;
+  }
 }
 
-function findPosition(list, value){
-    for (let i = 0; i < list.length; i++){
-        let fruit = list[i];
-        if (fruit === value){
-            taskBAnswer = i;
-        }
+function findPosition(list, value) {
+  for (let i = 0; i < list.length; i++) {
+    let fruit = list[i];
+    if (fruit === value) {
+      taskBAnswer = i;
     }
-    return taskBAnswer
+  }
+  return taskBAnswer;
 }
 console.log("task B Answer: " + findPosition(fruits, "raspberry"));
 
@@ -104,10 +104,10 @@ console.log("task B Answer: " + findPosition(fruits, "raspberry"));
 console.log("Task: C");
 let fruitsStartingWithLetterB = [];
 
-for (let i = 0; i < fruits.length; i++){
-    if (fruits[i][0] === "b"){
-        fruitsStartingWithLetterB.push(fruits[i]);
-    }
+for (let i = 0; i < fruits.length; i++) {
+  if (fruits[i][0] === "b") {
+    fruitsStartingWithLetterB.push(fruits[i]);
+  }
 }
 
 console.log(fruitsStartingWithLetterB);
@@ -120,12 +120,12 @@ console.log(fruitsStartingWithLetterB.length);
 */
 console.log("Task: D");
 
-let fruitsLongerThan8Characters = []
+let fruitsLongerThan8Characters = [];
 
-for (let i = 0; i < fruits.length; i++){
-    if (fruits[i].length > 8){
-        fruitsLongerThan8Characters.push(fruits[i]);
-    }
+for (let i = 0; i < fruits.length; i++) {
+  if (fruits[i].length > 8) {
+    fruitsLongerThan8Characters.push(fruits[i]);
+  }
 }
 
 console.log(fruitsLongerThan8Characters);
@@ -140,3 +140,19 @@ console.log("Task: E");
 
 const A = [1, 4, 5, "Bananas", true, 3.14, 9.81];
 const B = [1, 3.14, 5, 9.81, true, 4, "Bananas"];
+
+function containsSameItems(listA, listB) {
+  let sortedListA = listA.sort().slice();
+  let sortedListB = listB.sort().slice();
+
+  if (sortedListA.length !== sortedListB.length) {
+    return false;
+  }
+
+  for (let i = 0; i < A.length; i++)
+    if (sortedListA[i] !== sortedListB[i]) {
+      return false;
+    }
+  return true;
+}
+console.log(containsSameItems(A, B));
